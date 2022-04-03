@@ -46,14 +46,14 @@ pipeline {
            }
       stage('NPM install') {
             steps{
-                sh 'npm install'
-                sh 'npm install dotenv'
+                sh 'brew install'
+                sh 'brew install dotenv'
             }
         }
        stage('test') {
             steps{
                echo 'Testing..'
-              sh 'npm test'
+              sh 'brew test'
             }
         }
 
