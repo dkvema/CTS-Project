@@ -39,7 +39,7 @@ pipeline {
                 echo sh(script: 'env|sort', returnStdout: true)
                 echo 'cloning the respository..'
                 echo " build version: ${MAJOR_VERSION}.${env.BUILD_ID}"
-                  echo "code commited from repository APPName:${appName}"
+                echo "code commited from repository APPName:${appName}"
               checkout scm
             }
         }
@@ -62,7 +62,7 @@ pipeline {
                     echo "docker build...."
 
                script {
-
+                  sh 'docker install'
                   sh "docker build -t ${appName}:v1.0.0  . "
 
             }
