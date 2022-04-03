@@ -44,10 +44,10 @@ pipeline {
               checkout scm
               }
            }
-      stage('NPM install') {
+      stage('node install') {
             steps{
-                sh 'NPM install'
-                sh 'NPM install dotenv'
+                sh 'node install'
+                sh 'node install dotenv'
             }
         }
        stage('test') {
