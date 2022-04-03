@@ -31,7 +31,7 @@ pipeline {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
       }
-    //tools {nodejs "NodeJS"}
+    tools {nodejs "NodeJS"}
 
     stages{
         stage('Clone the repository') {
@@ -43,7 +43,7 @@ pipeline {
               checkout scm
             }
         }
-      /*
+      
       stage('NPM install') {
             steps{
                 sh 'npm install'
@@ -57,13 +57,13 @@ pipeline {
             }
         }
 
-      */  
+        
         stage('Docker build') {
             steps{
                     echo "docker build...."
 
                script {
-                   brew install docker 
+                    
                   sh "docker build -t ${appName}:v1.0.0  . "
 
             }
