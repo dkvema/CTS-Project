@@ -46,8 +46,8 @@ pipeline {
            }
       stage('node install') {
             steps{
-                sh 'node install'
-                sh 'node install dotenv'
+                sh 'brew install node'
+                //sh 'node install dotenv'
             }
         }
        stage('test') {
