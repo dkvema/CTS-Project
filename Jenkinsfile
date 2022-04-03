@@ -32,7 +32,7 @@ pipeline {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
       }
-     tools {nodejs "NodeJS"}
+     // tools {nodejs "NodeJS"}
 
     stages{
         stage('Clone the repository') {
