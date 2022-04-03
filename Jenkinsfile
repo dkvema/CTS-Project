@@ -43,7 +43,7 @@ pipeline {
               checkout scm
             }
         }
-        stage('NPM install') {
+       /* stage('NPM install') {
             steps{
                 sh 'npm install'
                 sh 'npm install dotenv'
@@ -56,7 +56,7 @@ pipeline {
             }
         }
 
-
+        */
         stage('Docker build') {
             steps{
                     echo "docker build...."
